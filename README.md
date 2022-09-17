@@ -10,7 +10,7 @@
 ## Entidades
 
 - Users
-  - id            - uuid        - PK
+  - id            - uuid        - PK AI
   - email         - string
   - password      - string
   - discord       - string
@@ -41,7 +41,8 @@
 - Vitest (alternativa ao Jest)
 - Prisma
 - Docker
-- ESLint
+- BCrypt
+- Tsyringe
 
 ---
 
