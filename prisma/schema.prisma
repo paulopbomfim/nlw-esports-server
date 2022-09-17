@@ -2,10 +2,22 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model Users {
+  id         String   @id @default(uuid())
+  email      String   @unique
+  password   String
+  discord    String
+  created_at DateTime
+  updated_at DateTime
+
+  @@map("users")
 }
